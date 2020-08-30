@@ -23,12 +23,67 @@ Retorna um JSON com o ranking dos deputados que mais pediram reembolso de verbas
 - Clone o repositório para a sua máquina
 - Navegue até o diretório clonado utilizando seu terminal. Exemplo:
 ```console
-cd desktop/oficina-2.0
+cd desktop/cidadao-de-olho
 ```
 - Instale as dependências
 ```console
 composer install
 ```
+
+- Realizar as configurações iniciais
+
+Use os comandos
+```console
+php artisan key:generate
+php artisan config:cache
+```
+OBS: caso haja algum erro nessa fase, rode mais uma vez o comando "composer install" e tente novamente.
+
+- Inicie o banco de dados da aplicação a nível local
+
+A aplicação utiliza o SQLite para armazenar os dados. Para realizar as migrations com sucesso, deve haver um arquivo nomeado "database.sqlite" no diretório "/database" da aplicação. Esse arquivo deve ser criado sem nenhum texto ou quaisquer conteúdos dentro dele.
+
+**Crie o arquivo "database.sqlite"**
+
+Através do terminal (exceto CMD)
+```console
+cd database
+touch database.sqlite
+```
+
+Ou simplesmente acesse o diretório "/database" através do explorador de arquivos e crie um arquivo com nome "database.sqlite"
+
+Esse arquivo servirá como um banco de dados a nível local, e armazenará todos os dados após as migrations. Note que se você apagar o arquivo "database.sqlite" ou mudá-lo de diretório, a aplicação encontrará problemas para se conectar ao banco de dados, portanto, se houver algum problema, crie manualmente o arquivo "database.sqlite" no diretório "/database". Lembre-se também de realizar as migrations novamente caso tenha apagado e recriado o arquivo "database.sqlite" por algum motivo.
+
+OBS: caso tenha problemas com o SQLite, basta trocar os dados no arquivo ".env" para se conectar ao banco de dados da sua preferência. Exemplo:
+
+Para se conectar ao MySQL, devem ser feitas as seguintes alterações
+
+
+DB_CONNECTION=mysql
+
+DB_HOST=127.0.0.1
+
+DB_PORT=3306
+
+DB_DATABASE=laravel
+
+DB_USERNAME=seuusuario
+
+DB_PASSWORD=suasenha
+
+
+
+- Realize as migrations, usando o comando
+```console
+php artisan migrate
+```
+
+- Popule o banco de dados com os dados da API, usando o comando
+```console
+php artisan db:seed
+```
+
 - Para visualizar a aplicação no browser, use o comando
 ```console
 php artisan serve
