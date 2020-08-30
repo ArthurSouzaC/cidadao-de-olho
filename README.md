@@ -6,18 +6,14 @@ API que consome os dados abertos da Assembléia Legislativa do Estado de Minas G
 ---
 ### Rotas
 
-**Todas as rotas devem ser acessadas com o prefixo "/api", rotas sem esse prefixo retornarão um erro**
-
-- /api/ranking/redes_sociais
+- /api/redes_sociais
 Retorna um JSON com o ranking das redes sociais mais utilizadas pelos deputados da ALMG, ordenada em ordem descrescente.
 
-- /api/ranking/2019/{mes}
+- /api/verbas_ind/2019/{mes}
 Retorna um JSON com o ranking dos deputados que mais pediram reembolso de verbas indenizatórias de acordo com um dado mês do ano de 2019.
 
 ---
 ### Instruções
-
-OBS: apesar de uma conexão ao banco de dados ter sido solicitada pelo recrutador, o autor optou por não usar um banco de dados na aplicação, manipulando todos os dados a partir do próprio banco de dados da ALMG.
 
 **Pré-requisitos para rodar a aplicação:**
 - Ter o [Composer](https://getcomposer.org/) instalado na máquina
