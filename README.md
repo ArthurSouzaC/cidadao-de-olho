@@ -32,6 +32,8 @@ composer install
 
 - Realizar as configurações iniciais
 
+**Habilite as variáveis de ambiente criando um arquivo ".env" na raiz da aplicação, contendo as linhas do arquivo ".env.example"**
+
 Use os comandos
 ```console
 php artisan key:generate
