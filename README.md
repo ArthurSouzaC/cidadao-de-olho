@@ -1,5 +1,5 @@
 # cidadao-de-olho
-API que consome os dados abertos da Assembléia Legislativa do Estado de Minas Gerais e disponibiliza os top 5 deputados que mais pediram reembolso de verbas indenizatórias por mês, além de mostrar o ranking das redes sociais mais utilizadas dentre os deputados. Código desenvolvido para submissão ao desafio de nível intermediário, proposto pelo programa de recrutamento da empresa Codificar.
+API que consome os dados abertos da Assembléia Legislativa do Estado de Minas Gerais e disponibiliza os top 5 deputados que mais pediram reembolso de verbas indenizatórias por mês, além de mostrar o ranking das redes sociais mais utilizadas dentre os deputados. Código desenvolvido para submissão a um desafio técnico.
 
 **Tecnologias utilizadas:** PHP, Laravel.
 
